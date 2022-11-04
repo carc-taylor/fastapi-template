@@ -5,9 +5,12 @@ Boilerplate code for basic start of a new fastapi project
 First run the following commands to set up your environment (macOS):
 
 ```
-python -m venv .venv
+pip3 install poetry
+python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+poetry install
 ```
 
-Then run `uvicorn app.main:app --reload`
+Then run `make docker_run` and the server will be available on localhost:5001
+
+You can edit the pyproject.toml to name it after your app, same with the Makefile, you can rename the docker image that gets created.
